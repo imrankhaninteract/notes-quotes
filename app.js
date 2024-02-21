@@ -1,3 +1,5 @@
+// app.js
+
 // Array of quotes
 const quotes = [
     "The only way to do great work is to love what you do. - Steve Jobs",
@@ -11,20 +13,22 @@ const quotes = [
     "It always seems impossible until it's done. - Nelson Mandela"
 ];
 
-// Function to display quotes like breaking news
-function displayQuotes() {
-    const quoteContainer = document.createElement("div");
-    quoteContainer.classList.add("quote-container");
+// Select the quote container
+const quoteContainer = document.querySelector(".quote-scroll");
 
+// Function to display quotes
+function displayQuotes() {
+    // Iterate through the quotes array
     quotes.forEach(quote => {
+        // Create a new <div> element for each quote
         const quoteElement = document.createElement("div");
+        // Add the 'quote' class to the <div> element
         quoteElement.classList.add("quote");
+        // Set the inner text of the <div> element to the current quote
         quoteElement.innerText = quote;
+        // Append the <div> element to the quote container
         quoteContainer.appendChild(quoteElement);
     });
-
-    const main = document.querySelector("#main");
-    main.insertAdjacentElement("beforebegin", quoteContainer);
 }
 
 // Call the function to display quotes

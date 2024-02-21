@@ -5,106 +5,48 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-}
-
-/* Note container styles */
-.note-container {
-    flex: 1;
-    margin-right: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.note-container button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.note-container button:hover {
-    background-color: #0056b3;
-}
-
-.notes {
-    margin-top: 20px;
-}
-
-.note {
-    margin-bottom: 10px;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-.note .tool {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-.note .tool i {
-    cursor: pointer;
-}
-
-.note textarea {
-    width: 100%;
-    min-height: 100px;
-    border: none;
-    outline: none;
-    resize: none;
-    font-size: 14px;
-}
-
-/* Quote container styles */
+/* Quotes container */
 .quote-container {
-    flex: 1;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.quote-container h2 {
-    margin-top: 0;
-    font-size: 20px;
-    color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden;
 }
 
 .quote {
-    margin-top: 20px;
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    animation: scrollText 20s linear infinite;
+}
+
+/* Note container */
+#main {
+    margin-top: 60px; /* Adjust according to the height of the quotes container */
     padding: 20px;
-    border-radius: 4px;
-    background-color: #f9f9f9;
 }
 
-.quote p {
-    margin: 0;
-    font-size: 16px;
+.note {
+    margin-bottom: 20px;
 }
 
-.quote button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.quote button:hover {
-    background-color: #0056b3;
+/* Animation for breaking news effect */
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
