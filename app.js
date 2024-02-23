@@ -35,8 +35,9 @@ function displayQuotes() {
 displayQuotes();
 
 // Selecting elements
-const addBtn = document.querySelector("#addBtn");
+const addBtn = document.querySelector(".note-container #addBtn");
 const main = document.querySelector("#main");
+
 
 // Function to save notes to local storage
 const saveNotes = () => {
