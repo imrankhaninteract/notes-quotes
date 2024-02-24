@@ -1,14 +1,35 @@
-/* style.css */
-
 /* Global styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Quotes container */
+.quote-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
 
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.quote-scroll {
+    overflow: hidden;
+}
 
 .quote {
     margin: 5px 0;
@@ -17,20 +38,54 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    animation: scrollText 20s linear infinite;
+    animation: scrollText 10s linear infinite;
+    display: inline-block;
 }
 
 /* Note container */
-#main {
-    margin-top: 60px; /* Adjust according to the height of the quotes container */
+.note-container {
+    background-color: #fff;
+    border-radius: 10px;
     padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notes {
+    margin-top: 20px;
 }
 
 .note {
-    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
 }
-#addBtn{
-   background-color: #ff0000;
+
+.note textarea {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    resize: none;
+}
+
+.tool {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#addBtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background-color: #0056b3;
 }
 
 /* Animation for breaking news effect */
