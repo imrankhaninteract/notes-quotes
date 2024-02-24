@@ -1,6 +1,6 @@
 /* Global styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif; /* New font family */
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
@@ -33,7 +33,7 @@ body {
 
 .quote {
     margin: 5px 0;
-    font-size: 18px;
+    font-size: 20px; /* Increased font size for quotes */
     font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
@@ -92,8 +92,14 @@ body {
 @keyframes scrollText {
     0% {
         transform: translateX(100%);
+        
+    }
+    10% {
+        transform: translateX(100%);
+       
     }
     100% {
         transform: translateX(-100%);
+       
     }
 }
